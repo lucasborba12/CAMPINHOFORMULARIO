@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+
+    *{
+        margin:0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+#menu{
+    list-style: none;
+    padding: 0px;
+    background-color: rgb(147, 218, 214);
+    color: white;
+}
+
+#menu li{
+    display: inline;
+}
+
+#menu li a{
+
+    padding: 20px;
+    display: inline-block;
+    text-decoration: none;
+    transition: background, 200ms;
+}
+#menu li a:hover{
+    background-color: rgb(20, 180, 185)
+}
+body{
+    text-align: center;
+ font-family: 'Times New Roman', Times, serif;
+}
+#area{
+    color: rgb(49, 160, 156);
+    position: absolute;
+    top: 56%;
+    left: 51%;
+    transform:translate(-50%,-50%);background-color: rgba(108, 211, 202, 0.4);
+    padding:15px;
+    border-radius:15px ;
+    } 
+    fieldset{
+        border: 4px solid rgb(150, 214, 214);
+        border-radius: 10px;
+        text-align: center;
+       
+        
+    }
+  legend{
+      border: 1px solid;
+      padding: 10px;
+      text-align: center;
+      background-color: rgb(255, 255, 255);
+      border-radius: 14px;
+  }
+  .imputArea{
+      position: relative;
+  }
+  .imputUsuario{
+      background: none;
+      border: none;
+      border-bottom: 1px solid rgb(166, 221, 212);
+      outline: none;
+      color: rgb(122, 245, 245);
+      font-size: 100%;
+      width: 100%;
+      
+}
+#submit{
+ background-color: white;
+ width: 100%;
+ border: none;
+ padding: 50px;
+ border-radius: 13px;
+ color:rgb(2, 2, 2);
+ font-family: 'Times New Roman', Times, serif;
+ cursor: pointer; 
+ }
+ 
+ #submit:hover{
+     background-color: rgb(197, 217, 221);
+ }
+
+ .destaque{
+     border: solid 0.5px rgb(77, 202, 211);
+     color: rgb(20, 180, 185);
+     font-weight: normal;
+     border-radius: 5px;
+ font-family: 'Times New Roman', Times, serif;
+ }
+ 
+.esconder-formulario{
+    animation: andar 500ms;
+    
+
+}
+
+form{
+     animation-name: escala;
+     animation-duration: 900ms;
+ }
+
+ @keyframes andar{
+     from{
+         transform: translate(0);
+     }to
+     {transform: translate(200vh);}
+ }
+
+@keyframes escala{
+    from{
+        transform: scale(0.8);
+        
+    }
+    to{
+        transform: scale(1);
+    }
+}
+
+
+
+</style>
+</head>
+<body>
+<!-- NAV = Navegação-->
+<!--<li>-->
+<!--<ul>-->
+<!--borderbox-->
+<!---->
+<!---->
+    <nav id = "menu">
+        <ul>
+            <li><a href=""></a>INÍCIO</li>
+            <li><a href=""></a>PESQUISA</li>
+            <li><a href=""></a>CAMPINHO DIGITAL</li>
+            <li><a href=""></a>LEAGUE OF LEGENDS</li>
+            <li><a href=""></a>PREVISÃO DO TEMPO</li>
+        </ul>
+    </nav>
+    <div id = "area">
+    <form action=""onsubmit="variadosdados()">
+         <fieldset>
+            <legend><b>Campinho Digital</b></legend>
+            <br><div class = "imputArea">
+                <input type="text" id ="nome" placeholder="Nome Completo" class = "imputUsuario"required> 
+            </div>
+            <br><br>
+            <div class = "imputArea">
+                <input type="Tel" id = Telefone placeholder="Telefone" class="imputUsuario" required >
+            </div>
+            <br><br>
+            <div>
+                <p>Sexo:</p>
+                <br>
+                <input type="Radio" id = Feminino required>
+                <label for="Feminino">Feminino</label>
+                <input type="Radio" id = Masculino required>
+                <label for="Masculino">Masculino</label>
+                <input type="Radio" id = Outros required>
+                <label for="Outros">Outros</label>
+               </div>
+            <br><br><div class = "imputArea">
+            <input type="text" id = Cidade placeholder="Cidade" class = "imputUsuario" required></div>
+            <br><br><div class = "imputArea">
+            <input type="text" id = Estado placeholder="Estado" class ="imputUsuario" required></div>
+            <br><br>
+            <input type="submit" id = submit >
+            <br><br>
+            <img></img>
+        </fieldset>
+
+    </form>
+    </div>
+    <script>
+        
+        /*
+        SELEÇÃO ID =
+        const nome = document.getElementById("nome")
+        nome.value = "André Lucas Figueredo Borba"
+        nome.classList.add("destaque")
+
+        const telefone = document.getElementById("Telefone")
+        telefone.value = "21 998335795"
+        telefone.classList.add("destaque")
+
+        const cidade = document.getElementById("Cidade")
+        cidade.value = "Rio de Janeiro"
+        cidade.classList.add("destaque")
+        
+        const estado = document.getElementById("Estado")
+        estado.value = "Rio de Janeiro"
+        estado.classList.add("destaque")*/
+         
+       /* 
+         ARRAY TAG = 
+       const divs = document.getElementsByTagName("div");
+        Array.from(divs).forEach(i => i.classList.add('destaque')) */
+
+
+            const elementos = document.getElementsByClassName("imputUsuario");
+            Array.from(elementos).forEach(i => i.classList.add("destaque"))
+            
+            const body = document.querySelector('body')
+            body.style.backgroundColor = "white"
+            
+           body.appendChild(div)
+
+             const divPrincipal = document.querySelector("#area")
+             const botao = document.querySelector("#submit")
+
+
+
+            
+            function variadosdados(){
+                var nome = document.getElementById("Nome").value
+                var telefone = document.getElementById("Telefone").value
+                var cidade = document.getElementById("Cidade").value
+                var estado = document.getElementById("Estado").value
+                if(estado == "Rio de Janeiro"){
+                alert(`Meu nome é ${nome} e o numero de ${telefone} mora na cidade ${cidade} e no estado ${estado}.`)}else{
+                    alert("O usuário não está cadastrado")
+                }
+
+            }
+            
+           
+            
+            </script>
+        
+
+
+    
+</body>
+</html>
+
+
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
