@@ -15,3 +15,5 @@ git reset --hard (chave do commit desejado) -> comando para trocar a versão de 
 git push origin main (git push) -> comando para enviar as alterações do repositório local para o repositório remoto (github)
 
 git pull -> comando para puxar as atualizações do github para meu repositório local
+
+git reset --hard -> (chave do comit desejado para retornar) 
